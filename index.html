@@ -1,112 +1,78 @@
 <!DOCTYPE html>
 <html lang="fr" dir="ltr">
-  <head>
+<head>
     <title>Gestionnaire de portefeuille boursier</title>
-    <meta charset="utf-8" />
-    <link rel="shortcut icon" type="image/x-icon" href="favicon-js.ico" />
-    <link rel="stylesheet" href="styles.css" />
-  </head>
+    <meta charset="utf-8"/>
+    <link rel="shortcut icon" type="image/x-icon" href="favicon-js.ico"/>
+    <link rel="stylesheet" href="styles.css"/>
+</head>
 
-  <body>
-    <header>
-      <h1>Screener D'action</h1>
+<body>
+<header>
+    <h1>Screener Actions</h1>
 
-      <p id="explication">
+    <p id="explication">
         Cette page permet de rechercher des actions, leurs données financières et leur cours.
-      </p>
-    </header>
-    <hr />
+    </p>
+</header>
+<hr/>
 
-    <main id="conteneur">
-      <!-- Section de recherche (avec résultats) -->
-      <section id="section-recherche">
-        <div id="bloc-recherche">
-          <!-- Champ de recherche -->
-          <input type="text" placeholder="Saisissez un nom d'entreprise ?" />
+<main id="conteneur">
+    <!-- Section de recherche (avec résultats) -->
+    <section id="section-recherche">
 
-          <!-- Boutons -->
-          <button
-            id="btn-lancer-recherche"
-            type="button"
-            class="btn_clicable"
-            title="Lancer la recherche"
-          >
-            <!-- Icone Loupe (provenant de flaticon.com) -->
-            <img src="images/loupe.svg" alt="Loupe pour recherche" width="22" />
-          </button>
+        <form id="bloc-recherche">
 
-          <button
-            id="btn-favoris"
-            type="button"
-            disabled
-            title="Ajouter la recherche aux favoris"
-          >
-            <!-- Icone étoile vide
-							(qui indique que la recherche ne fait pas partie des favoris) -->
-            <img src="images/etoile-vide.svg" alt="Etoile vide" width="22" />
+            <!-- Champ de recherche -->
+            <input id="input-search" type="text" placeholder="Saisissez un nom d'entreprise :"
+                   pattern="([A-Za-z]{1,5})(-[A-Za-z]{1,2})?"/>
 
-            <!-- Icone étoile pleine
-								(qui indique que la recherche fait partie des favoris) -->
-            <!-- <img src="images/etoile-pleine.svg" alt="Etoile pleine" width="22" > -->
 
-            <!-- (Les 2 icones d'étoile provenant de flaticon.com) -->
-          </button>
-        </div>
+            <!-- Boutons -->
+            <button
+                    id="btn-lancer-recherche"
+                    type="submit"
+                    class="btn_clicable"
+                    title="Lancer la recherche">Envoyer
+            </button>
+
+            <button id="btn-favoris"
+                    type="button"
+                    disabled
+                    title="Ajouter la recherche aux favoris">
+
+                <!-- Icone étoile vide
+                                (qui indique que la recherche ne fait pas partie des favoris) -->
+                <img src="images/etoile-vide.svg" alt="Etoile vide" width="22"/>
+
+                <!-- Icone étoile pleine
+                                    (qui indique que la recherche fait partie des favoris) -->
+                <!-- <img src="images/etoile-pleine.svg" alt="Etoile pleine" width="22" > -->
+
+                <!-- (Les 2 icones d'étoile provenant de flaticon.com) -->
+            </button>
+
+        </form>
+
 
         <!-- Résultats de recherche -->
         <div id="bloc-gif-attente">
-          <img
-            src="images/attente-ajax.gif"
-            alt="GIF Attente de résultats"
-            width="50"
-          />
+            <img
+                    src="images/attente-ajax.gif"
+                    alt="GIF Attente de résultats"
+                    width="50"
+            />
         </div>
+
         <div id="bloc-resultats">
-
-          <p class="info-vide">(Aucun résultat trouvé)</p>
+            <p class="info-vide">(Aucun résultat trouvé)</p>
         </div>
-      </section>
+    </section>
 
-      <!-- Section de séparation (avec la bordure verte) -->
-      <section id="section-separation"></section>
+    <!-- Section de séparation (avec la bordure verte) -->
+    <section id="section-separation"></section>
 
-      <!-- Section des recherches favorites -->
-      <section id="section-favoris">
-        <h2>Recherches favorites</h2>
-        <p>
-          Cliquer sur une recherche favorite ci-dessus pour relancer celle-ci :
-        </p>
-        <ul id="liste-favoris">
-          <li>
-            <span title="Cliquer pour relancer la recherche">Grenoble</span>
-            <img
-              src="images/croix.svg"
-              alt="Icone pour supprimer le favori"
-              width="15"
-              title="Cliquer pour supprimer le favori"
-            />
-          </li>
-          <li>
-            <span title="Cliquer pour relancer la recherche">Lyon</span>
-            <img
-              src="images/croix.svg"
-              alt="Icone pour supprimer le favori"
-              width="15"
-              title="Cliquer pour supprimer le favori"
-            />
-          </li>
-          <li>
-            <span title="Cliquer pour relancer la recherhe.">Web</span>
-            <img
-              src="images/croix.svg"
-              alt="Icone pour supprimer le favori"
-              width="15"
-              title="Cliquer pour supprimer le favori"
-            />
-          </li>
-        </ul>
-        <p class="info-vide">(Aucune recherche favorite)</p>
-      </section>
-    </main>
-  </body>
+
+</main>
+</body>
 </html>

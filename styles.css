@@ -54,7 +54,7 @@ h1 {
   flex: 1 1 auto;
 }
 
-#bloc-recherche {
+#bloc-recherche  {
   display: flex;
   margin: 0 auto;
   min-width: 450px;

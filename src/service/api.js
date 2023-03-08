@@ -18,10 +18,29 @@ const retriveStock = function (ticker) {
  *
  * @param search      The search
  *
- * @returns           A list of corresponding stocks
+ * @returns           A list of corresponding stocks names
  */
 const searchStock = function (search) {
 
+
+
+
+    /*
+     * Forme du résultat :
+     * {
+     *  stock : [
+     *      {
+     *          name: 'Google',
+     *          ticker: 'GOOG'
+     *      },
+     *      {
+     *          name: 'Amazon',
+     *          ticker: 'AMZ'
+     *      }
+     *
+     * ]
+     * }
+     */
 
 }
 
