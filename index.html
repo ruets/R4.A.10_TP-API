@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="fr" dir="ltr">
   <head>
-    <title>Recherche d'offres d'emploi</title>
+    <title>Gestionnaire de portefeuille boursier</title>
     <meta charset="utf-8" />
     <link rel="shortcut icon" type="image/x-icon" href="favicon-js.ico" />
     <link rel="stylesheet" href="styles.css" />
@@ -9,14 +9,10 @@
 
   <body>
     <header>
-      <h1>Recherche d'offres d'emploi</h1>
+      <h1>Screener D'action</h1>
 
       <p id="explication">
-        Cette page permet de rechercher des offres d'emploi via l'API publique
-        de <a href="https://www.indeed.fr/" target="_blank">indeed.fr</a>.<br />
-        Saisir le nom d'une ville, d'un poste, ... pour rechercher les postes
-        correspondants, et enregistrer vos recherches favorites pour les
-        retrouver facilement.
+        Cette page permet de rechercher des actions, leurs données financières et leur cours.
       </p>
     </header>
     <hr />
@@ -26,7 +22,7 @@
       <section id="section-recherche">
         <div id="bloc-recherche">
           <!-- Champ de recherche -->
-          <input type="text" placeholder="Que cherchez-vous ?" />
+          <input type="text" placeholder="Saisissez un nom d'entreprise ?" />
 
           <!-- Boutons -->
           <button
@@ -66,9 +62,7 @@
           />
         </div>
         <div id="bloc-resultats">
-          <p class="res">Résultat 1 ...</p>
-          <p class="res">Résultat 2 ...</p>
-          <p class="res">Résultat 3 ...</p>
+
           <p class="info-vide">(Aucun résultat trouvé)</p>
         </div>
       </section>
