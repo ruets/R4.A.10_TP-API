@@ -1,78 +1,84 @@
 <!DOCTYPE html>
 <html lang="fr" dir="ltr">
-<head>
+  <head>
     <title>Gestionnaire de portefeuille boursier</title>
-    <meta charset="utf-8"/>
-    <link rel="shortcut icon" type="image/x-icon" href="favicon-js.ico"/>
-    <link rel="stylesheet" href="styles.css"/>
-</head>
+    <meta charset="utf-8" />
+    <link rel="shortcut icon" type="image/x-icon" href="favicon-js.ico" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
 
-<body>
-<header>
-    <h1>Screener Actions</h1>
+  <body>
+    <header>
+      <h1>Screener Actions</h1>
 
-    <p id="explication">
-        Cette page permet de rechercher des actions, leurs données financières et leur cours.
-    </p>
-</header>
-<hr/>
+      <p id="explication">
+        Cette page permet de rechercher des actions, leurs données financières
+        et leur cours.
+      </p>
+    </header>
+    <hr />
 
-<main id="conteneur">
-    <!-- Section de recherche (avec résultats) -->
-    <section id="section-recherche">
-
+    <main id="conteneur">
+      <!-- Section de recherche (avec résultats) -->
+      <section id="section-recherche">
         <form id="bloc-recherche">
+          <!-- Champ de recherche -->
+          <input
+            id="input-search"
+            type="text"
+            placeholder="Saisissez un nom d'entreprise :"
+            pattern="([A-Za-z]{1,5})(-[A-Za-z]{1,2})?"
+          />
 
-            <!-- Champ de recherche -->
-            <input id="input-search" type="text" placeholder="Saisissez un nom d'entreprise :"
-                   pattern="([A-Za-z]{1,5})(-[A-Za-z]{1,2})?"/>
+          <!-- Boutons -->
+          <button
+            id="btn-lancer-recherche"
+            type="submit"
+            class="btn_clicable"
+            title="Lancer la recherche"
+          >
+            Envoyer
+          </button>
 
-
-            <!-- Boutons -->
-            <button
-                    id="btn-lancer-recherche"
-                    type="submit"
-                    class="btn_clicable"
-                    title="Lancer la recherche">Envoyer
-            </button>
-
-            <button id="btn-favoris"
-                    type="button"
-                    disabled
-                    title="Ajouter la recherche aux favoris">
-
-                <!-- Icone étoile vide
+          <button
+            id="btn-favoris"
+            type="button"
+            disabled
+            title="Ajouter la recherche aux favoris"
+          >
+            <!-- Icone étoile vide
                                 (qui indique que la recherche ne fait pas partie des favoris) -->
-                <img src="images/etoile-vide.svg" alt="Etoile vide" width="22"/>
+            <img src="images/etoile-vide.svg" alt="Etoile vide" width="22" />
 
-                <!-- Icone étoile pleine
+            <!-- Icone étoile pleine
                                     (qui indique que la recherche fait partie des favoris) -->
-                <!-- <img src="images/etoile-pleine.svg" alt="Etoile pleine" width="22" > -->
+            <!-- <img src="images/etoile-pleine.svg" alt="Etoile pleine" width="22" > -->
 
-                <!-- (Les 2 icones d'étoile provenant de flaticon.com) -->
-            </button>
-
+            <!-- (Les 2 icones d'étoile provenant de flaticon.com) -->
+          </button>
         </form>
-
 
         <!-- Résultats de recherche -->
         <div id="bloc-gif-attente">
-            <img
-                    src="images/attente-ajax.gif"
-                    alt="GIF Attente de résultats"
-                    width="50"
-            />
+          <img
+            src="images/attente-ajax.gif"
+            alt="GIF Attente de résultats"
+            width="50"
+          />
         </div>
 
         <div id="bloc-resultats">
-            <p class="info-vide">(Aucun résultat trouvé)</p>
+          <ul id="liste-resultats"></ul>
         </div>
-    </section>
+      </section>
 
-    <!-- Section de séparation (avec la bordure verte) -->
-    <section id="section-separation"></section>
+      <!-- Section de séparation (avec la bordure verte) -->
+      <section id="section-separation"></section>
+    </main>
 
-
-</main>
-</body>
+    <!-- Scripts -->
+    <script src="/src/view/search_view.js"></script>
+    <script src="/src/service/api.js"></script>
+    <script src="/src/controller/search_controller.js"></script>
+  </body>
 </html>
