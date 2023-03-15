@@ -94,3 +94,15 @@ const getStockValue = async function (stock) {
 
   return values.json();
 };
+
+/**
+ * Fetches the comâny overview from the stock ticker.
+ *
+ * @param stock
+ * @returns {Promise<void>}
+ */
+const getCompanyOverview = async function (stock) {
+  let overview = await fetch(`https://www.alphavantage.co/query?function=OVERVIEW&symbol=${stock}&apikey=${config.key}`);
+  console.log(overview.json);
+  return overview.json();
+}
