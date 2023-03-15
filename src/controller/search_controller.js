@@ -22,7 +22,7 @@ const search = function (event) {
     data.bestMatches.forEach(function (result) {
       let li = document.createElement("li");
       li.innerHTML =
-        "<a href='pages/stock.html?stock=" +
+        "<a href='pages/stock.html/?stock=" +
         result["1. symbol"] +
         "' >" +
         result["2. name"] +
