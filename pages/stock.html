@@ -3,15 +3,65 @@
   <head>
     <meta charset="UTF-8" />
     <title>Title</title>
+    <link rel="stylesheet" href="/style/stock.css" />
   </head>
   <body>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 
-    <h1 id="title-stock"></h1>
+    <div class="container">
+      <div class="infos">
+        <h1>Stock Name - Stock ticker</h1>
+        <h2>Current price</h2>
+      </div>
 
+      <div class="history">
+        <div class="chart">
+          <canvas class="chart-container"></canvas>
+        </div>
+
+        <div class="values">
+          <table class="values-table">
+            <tr>
+              <th>Date</th>
+              <th>Open</th>
+              <th>High</th>
+              <th>Low</th>
+              <th>Close</th>
+              <th>Volume</th>
+            </tr>
+          </table>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      const ctx = document.getElementsByClassName("chart-container");
+
+      new Chart(ctx, {
+        type: "bar",
+        data: {
+          labels: ["Red", "Blue", "Yellow", "Green", "Purple", "Orange"],
+          datasets: [
+            {
+              label: "# of Votes",
+              data: [12, 19, 3, 5, 2, 3],
+              borderWidth: 1,
+            },
+          ],
+        },
+        options: {
+          scales: {
+            y: {
+              beginAtZero: true,
+            },
+          },
+        },
+      });
+    </script>
 
     <!-- Scripts -->
-    <script src="/src/view/stock_view.js"></script>
-    <script src="/src/service/api.js"></script>
-    <script src="/src/controller/stock_controller.js"></script>
+    <script src="../src/view/stock_view.js"></script>
+    <script src="../src/service/api.js"></script>
+    <script src="../src/controller/stock_controller.js"></script>
   </body>
 </html>
