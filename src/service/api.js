@@ -86,9 +86,9 @@ const searchStock = async function (search) {
 
 const getStockValue = async function (stock) {
   let values = await fetch(
-    "https://www.alphavantage.co/query?function=TIME_SERIES_INTRADAY&symbol=" +
+    "https://www.alphavantage.co/query?function=TIME_SERIES_DAILY_ADJUSTED&outputsize=compact&symbol=" +
       stock +
-      "&interval=5min&apikey=" +
+      "&apikey=" +
       config.key
   );
 
