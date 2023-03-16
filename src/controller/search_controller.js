@@ -1,9 +1,4 @@
 "use strict";
-
-portfolio.addStock("GOOG", 3, 90);
-portfolio.addStock("AMZN", 2, 100);
-portfolio.addStock("AMZN", 2, 200);
-
 view.buttonSubmit.addEventListener("click", function (event) {
   search(event);
 });
