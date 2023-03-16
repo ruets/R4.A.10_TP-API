@@ -10,8 +10,8 @@
 
     <div class="container">
       <div class="infos">
-        <h1>Stock Name - Stock ticker</h1>
-        <h2>Current price</h2>
+        <h1 class="title">Stock Name - Stock ticker</h1>
+        <h2 class="price">Current price</h2>
       </div>
 
       <div class="history">
@@ -33,31 +33,6 @@
         </div>
       </div>
     </div>
-
-    <script>
-      const ctx = document.getElementsByClassName("chart-container");
-
-      new Chart(ctx, {
-        type: "bar",
-        data: {
-          labels: ["Red", "Blue", "Yellow", "Green", "Purple", "Orange"],
-          datasets: [
-            {
-              label: "# of Votes",
-              data: [12, 19, 3, 5, 2, 3],
-              borderWidth: 1,
-            },
-          ],
-        },
-        options: {
-          scales: {
-            y: {
-              beginAtZero: true,
-            },
-          },
-        },
-      });
-    </script>
 
     <!-- Scripts -->
     <script src="../src/view/stock_view.js"></script>
