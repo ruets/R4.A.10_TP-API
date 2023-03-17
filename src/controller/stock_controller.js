@@ -69,4 +69,15 @@ stocks.then(function (data) {
       ],
     },
   });
+
+  stockView.buttonWallet.addEventListener("click", function (event) {
+    event.preventDefault();
+    portfolio.addStock(
+      companyData.symbol,
+      1,
+      timeSeries[lastRefreshed]["4. close"]
+    );
+    window.location.href = "pages/portfolio.html";
+    console.log(portfolio);
+  });
 });

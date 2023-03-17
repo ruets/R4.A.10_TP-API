@@ -1,19 +1,23 @@
 "use strict";
-view.buttonSubmit.addEventListener("click", function (event) {
+searchView.buttonSubmit.addEventListener("click", function (event) {
   search(event);
 });
-view.inputSearch.addEventListener("keyup", function (event) {
+searchView.inputSearch.addEventListener("keyup", function (event) {
   if (event.key === "Enter") {
     search(event);
   }
 });
 
+searchView.buttonFavoris.addEventListener("click", function (event) {
+  event.preventDefault();
+  window.location.href = "pages/portfolio.html";
+});
 const search = function (event) {
   event.preventDefault();
 
   // Search the input value
-  searchStock(view.inputSearch.value).then(function (data) {
-    view.resultats.innerHTML = "";
+  searchStock(searchView.inputSearch.value).then(function (data) {
+    searchView.resultats.innerHTML = "";
     data.bestMatches.forEach(function (result) {
       let li = document.createElement("li");
       li.innerHTML =
@@ -27,7 +31,7 @@ const search = function (event) {
         result["1. symbol"] +
         ")" +
         "</a>";
-      view.resultats.appendChild(li);
+      searchView.resultats.appendChild(li);
     });
   });
 };

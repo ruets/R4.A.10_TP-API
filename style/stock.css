@@ -54,6 +54,24 @@ h1 {
   height: 100%;
 }
 
+.infos button {
+  background-color: var(--background-button);
+  border: 1px solid var(--almost-black);
+  border-radius: 5px;
+  color: var(--almost-black);
+  font-size: 1em;
+  font-weight: bold;
+  margin: 10px;
+  padding: 5px;
+  width: 100px;
+  height: 50px;
+}
+
+.infos button:hover {
+  background-color: var(--active-green);
+  color: var(--text-color);
+}
+
 .history {
   display: flex;
 }
