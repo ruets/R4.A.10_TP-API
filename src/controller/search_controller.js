@@ -10,7 +10,7 @@ searchView.inputSearch.addEventListener("keyup", function (event) {
 
 searchView.buttonFavoris.addEventListener("click", function (event) {
   event.preventDefault();
-  window.location.href = "pages/portfolio.html";
+  window.location.href = "../../pages/wallet.html";
 });
 const search = function (event) {
   event.preventDefault();

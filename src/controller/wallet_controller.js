@@ -1,7 +1,9 @@
+"use strict";
+
 //On itère à partir de la liste du portefeuille
-for (i = 0; i < Object.keys(portfolio.stocks).length; i++) {
-  let ticker = Object.keys(portfolio.stocks)[i];
-  let stock = portfolio.stocks[ticker];
+for (let i = 0; i < Object.keys(wallet.stocks).length; i++) {
+  let ticker = Object.keys(wallet.stocks)[i];
+  let stock = wallet.stocks[ticker];
   //On crée un nouvel élément
   let div = document.createElement("div");
 

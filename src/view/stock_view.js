@@ -5,5 +5,5 @@ const stockView = {
   price: document.getElementsByClassName("price"),
   chart: document.getElementsByClassName("chart-container"),
   table: document.getElementsByClassName("table-values"),
-  buttonWallet: document.getElementById("btn-wallet"),
+  buttonWallet: document.getElementsByClassName("btn-wallet"),
 };

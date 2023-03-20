@@ -70,14 +70,14 @@ stocks.then(function (data) {
     },
   });
 
-  stockView.buttonWallet.addEventListener("click", function (event) {
+  stockView.buttonWallet[0].addEventListener("click", function (event) {
     event.preventDefault();
-    portfolio.addStock(
+    wallet.addStock(
       companyData.symbol,
       1,
       timeSeries[lastRefreshed]["4. close"]
     );
-    window.location.href = "pages/portfolio.html";
-    console.log(portfolio);
+    window.location.href = "../../pages/wallet.html";
+    console.log(wallet);
   });
 });
