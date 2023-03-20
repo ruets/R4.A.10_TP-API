@@ -18,7 +18,6 @@
 body {
   background-color: var(--background);
   font: 14pt Roboto, Arial, sans-serif;
-  margin: 0;
   padding: 0;
   width: 90%;
   margin: 40px auto;
@@ -35,6 +34,10 @@ h1 {
   font-variant: small-caps;
   font-size: 2.5em;
   color: var(--main-green);
+}
+
+#btn-favoris:hover {
+  background: white;
 }
 
 #explication {
@@ -54,7 +57,7 @@ h1 {
   flex: 1 1 auto;
 }
 
-#bloc-recherche  {
+#bloc-recherche {
   display: flex;
   margin: 0 auto;
   min-width: 450px;

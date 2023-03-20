@@ -1,5 +1,6 @@
 "use strict";
 
-const portfolioView = {
-  mainSection: document.getElementById("main-wallet"),
+const walletView = {
+  mainSection: document.getElementsByClassName("main-wallet"),
+  tableSection: document.getElementsByClassName("table-wallet-body"),
 };

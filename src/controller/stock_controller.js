@@ -7,7 +7,6 @@ let companyData = {
 };
 
 const stocks = getStockValue(companyData.symbol);
-console.log(stocks);
 
 document.title = companyData.symbol + " - " + companyData.name;
 stockView.title.innerHTML = companyData.symbol + " - " + companyData.name;
@@ -21,7 +20,6 @@ stocks.then(function (data) {
     timeSeries[lastRefreshed]["4. close"] +
     " USD";
 
-  console.log(timeSeries["2023-03-15 16:00:00"]);
   let keys = Object.keys(timeSeries);
   let dates = [];
   let prices = [];
@@ -74,10 +72,11 @@ stocks.then(function (data) {
     event.preventDefault();
     wallet.addStock(
       companyData.symbol,
+      companyData.name,
       1,
       timeSeries[lastRefreshed]["4. close"]
     );
-    window.location.href = "../../pages/wallet.html";
+    window.location.href = "wallet.html";
     console.log(wallet);
   });
 });

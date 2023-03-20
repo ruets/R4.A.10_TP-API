@@ -94,9 +94,6 @@ h1 {
 }
 
 .table-values tr {
-  display: flex;
-  flex-flow: row nowrap;
-  justify-content: space-between;
   border-collapse: collapse;
   text-align: right;
 }

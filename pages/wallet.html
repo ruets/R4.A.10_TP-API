@@ -3,12 +3,26 @@
   <head>
     <meta charset="UTF-8" />
     <title>Title</title>
-    <link rel="stylesheet" href="../style/stock.css" />
+    <link rel="stylesheet" href="../style/wallet.css" />
   </head>
   <body>
     <h1>Mon portefeuille</h1>
 
-    <main id="main-portfolio"></main>
+    <main class="main-wallet">
+      <table class="table-wallet">
+        <thead>
+          <tr>
+            <th>Symbole</th>
+            <th>Nom</th>
+            <th>Prix</th>
+            <th>Quantité</th>
+            <th>Montant</th>
+            <th>Delete</th>
+          </tr>
+        </thead>
+        <tbody class="table-wallet-body"></tbody>
+      </table>
+    </main>
 
     <!-- Scripts -->
     <script src="../src/model/wallet.js"></script>

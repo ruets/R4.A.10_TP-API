@@ -1,0 +1,60 @@
+/* Importation de la police Roboto */
+@import url(https://fonts.googleapis.com/css?family=Roboto);
+
+/* Définition des principales couleurs */
+:root {
+  --text-color: #fafafa; /* (Texte presque blanc) */
+  --background: #34495e; /* (Fond bleu foncé) */
+  --background-button: #bebebe;
+  --main-green: rgb(26, 188, 156);
+  --active-green: rgb(20, 156, 128);
+  --almost-black: #2d2d2d;
+}
+
+* {
+  color: var(--text-color);
+  overflow: hidden;
+}
+
+body {
+  background-color: var(--background);
+  font: 14pt Roboto, Arial, sans-serif;
+  padding: 0;
+  width: 95%;
+  margin: auto;
+}
+
+/* Paragraphes "Aucun résultat..." et "Aucune recherche..." */
+p.info-vide {
+  font-style: italic;
+}
+
+/* Partie En-tête */
+h1 {
+  text-align: center;
+  font-variant: small-caps;
+  font-size: 2.5em;
+  color: var(--main-green);
+}
+
+/* Conteneur principal */
+.table-wallet {
+  margin: auto;
+  width: 70%;
+  border: 1px solid gray;
+  border-collapse: collapse;
+}
+
+.table-wallet tr {
+  border: 1px solid gray;
+
+  border-collapse: collapse;
+  text-align: center;
+}
+
+.table-wallet th,
+.table-wallet td {
+  border: 1px solid gray;
+  border-collapse: collapse;
+  padding: 5px;
+}
